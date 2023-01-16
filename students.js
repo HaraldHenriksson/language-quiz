@@ -76,10 +76,6 @@ let array = [
 		image: "assets/images/f-sharp.jpg",
 	},
 	{
-		name: "Groovy",
-		image: "assets/images/groovy.jpg",
-	},
-	{
 		name: "Haskell",
 		image: "assets/images/haskell.jpg",
 	},
@@ -94,13 +90,5 @@ let array = [
 	{
 		name: "Perl",
 		image: "assets/images/perl.jpg",
-	},
-	{
-		name: "PowerShell",
-		image: "assets/images/powershell.jpg",
-	},
-	{
-		name: "R",
-		image: "assets/images/r.jpg",
 	},
 ];
