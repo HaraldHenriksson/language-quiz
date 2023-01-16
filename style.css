@@ -1,0 +1,151 @@
+html {
+	font-size: 1em;
+}
+
+body {
+	color: #333;
+	font-family: 'Baskervville', monospace;
+	font-weight: 400;
+}
+
+ h1 {
+	display: flex;
+	justify-content: center;
+} 
+
+#question {
+	font-size: 100px;
+}
+
+.image {
+	display: flex;
+	justify-content: center; 
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+}
+
+#pic {
+	display: none;
+}
+
+.container {
+	margin-top: 15vh;
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	width: fit-content;
+}
+
+ .namesContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center; 
+	display: none;
+	margin: 2%;
+}
+
+ button {
+	margin: 2%;
+}
+
+#correctPicResult {
+	width: 100px;
+	height: 100px;
+}
+
+#wrongPicResult {
+	width: 100px;
+	height: 100px;
+	filter: blur(5px);
+	
+	
+}
+
+@media (max-width: 400px) {
+	img {
+		width: 300px;
+		height: 300px;
+	}
+	button {
+		margin: 2%;
+	}
+	.container {
+		margin-top: 10vh;
+	}
+}
+
+	@media (min-width: 800px) {
+		img {
+			width: 350px;
+			height: 350px;
+		}
+		button {
+			margin: 5%;
+		}
+	}
+	@media (min-width: 1000px) {
+		img {
+			width: 350px;
+			height: 350px;
+		}
+		button {
+			margin: 6%;
+			font-size: large;
+		}
+		.container {
+			margin-top: 10vh;
+		}
+	}
+
+	@media (min-width: 1500px) {
+		img {
+			width: 450px;
+			height: 450px;
+		}
+		button {
+			margin: 4%;
+			font-size: large;
+		}
+		.container {
+			margin-top: 0vh;
+		}
+	}
+
+/* button {
+	display: flex;
+	flex-direction: column;
+	justify-content: center; 
+	margin: 2%;
+}
+
+.startGame {
+	display: flex;
+	flex-direction: column;
+	justify-content: center; 
+}
+
+.resultContainer {
+	display: flex;
+	flex-direction: column;
+	justify-content: center; 
+}
+.container {
+	text-align: center;
+}  */
+
+/* @media (min-width: 603px) {
+	.container {
+		max-width: 80%;
+	}
+}
+
+@media (min-width: 800px) {
+	.container {
+		max-width: 80%;
+	}
+} */
