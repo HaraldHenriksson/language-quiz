@@ -40,23 +40,29 @@ let shortMode = false;
 let defaultMode = false;
 let longMode = false;
 
+let counter = 0;
+function count() {
+  counter++;
+  counterEl.innerHTML = `${counter} /10`
+}
+
 
 tenEl.addEventListener("click", () => {
   shortMode = true
   sloganEl.style.display = "none"
-  counterEl.innerHTML = guesses + "/10"
+  counterEl.innerHTML = `${counter} /10`
 });
 
 twentyEl.addEventListener("click", () => {
   defaultMode = true
   sloganEl.style.display = "none"
-  counterEl.innerHTML = guesses + "/20"
+  counterEl.innerHTML = counter + "/20"
 });
 
 allEl.addEventListener("click", () => {
   longMode = true
   sloganEl.style.display = "none"
-  counterEl.innerHTML = guesses + "/" + array.length
+  counterEl.innerHTML = counter + "/" + array.length
 });
 
 let guesses = 0;
@@ -124,14 +130,14 @@ let complete = false
 
 namesEl.addEventListener("click", (e) => {
   if (e.target.tagName === "BUTTON") {
-    guesses++;
-    counter++;
     if (e.target.id === `corrGuess`) {
+      count()
       corrNrOfGuesses++;
       e.target.classList.replace("btn-light", "btn-success");
       allCorrect.push({image: corrClassmate.image});
       startDelay();
     } else {
+      count()
       e.target.classList.replace("btn-light", "btn-danger");
       allWrong.push({image: corrClassmate.image});
       startDelay();
