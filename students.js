@@ -1,4 +1,4 @@
-const array = [
+let array = [
 	{
 		name: "C",
 		image: "assets/images/students/c.jpg",

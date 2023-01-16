@@ -65,12 +65,14 @@ const start = () => {
   if (guesses !== array.length) {
 
     shuffleArr(array)
+
+    array = array.filter(image => !namesNotToShow.includes(image))
     
-    corrClassmate = array[guesses]
+    corrClassmate = array[0]
     picEl.src = "students/" + corrClassmate.image
     corrName = corrClassmate.name
     namesNotToShow.push(corrClassmate)
-    let array = array.filter(image => !namesNotToShow.includes(image));
+    console.log(namesNotToShow)
     arrayCopy = array.filter(array => array.name !== corrName);
     
 
@@ -79,7 +81,6 @@ const start = () => {
     //GENERATE NEW ARRAY
     newRandomArr = arrayCopy.slice(0, 3);
     newRandomArr.push({name: corrName});
-    console.log(namesNotToShow)
     //SHUFFFLE NEW ARRAY AGAIN SO RIGHT BUTTON ISN'T AT THE SAME SPOT EVERY TIME 
     shuffleArr(newRandomArr);
 
