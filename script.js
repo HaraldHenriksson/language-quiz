@@ -11,6 +11,7 @@ const restartEl = document.querySelector('#restart');
 const questionEl = document.querySelector('#question');
 const picResultEl = document.querySelector('#picResult');
 const sloganEl = document.querySelector('#slogan');
+const counterEl = document.querySelector('#counter');
 
 restartEl.style.display ="none";
 
@@ -43,16 +44,19 @@ let longMode = false;
 tenEl.addEventListener("click", () => {
   shortMode = true
   sloganEl.style.display = "none"
+  counterEl.innerHTML = guesses + "/10"
 });
 
 twentyEl.addEventListener("click", () => {
   defaultMode = true
   sloganEl.style.display = "none"
+  counterEl.innerHTML = guesses + "/20"
 });
 
 allEl.addEventListener("click", () => {
   longMode = true
   sloganEl.style.display = "none"
+  counterEl.innerHTML = guesses + "/" + array.length
 });
 
 let guesses = 0;
@@ -121,6 +125,7 @@ let complete = false
 namesEl.addEventListener("click", (e) => {
   if (e.target.tagName === "BUTTON") {
     guesses++;
+    counter++;
     if (e.target.id === `corrGuess`) {
       corrNrOfGuesses++;
       e.target.classList.replace("btn-light", "btn-success");
@@ -158,10 +163,6 @@ const startDelay = () => {
   }, 400);
 };
 
-
-
 restartEl.addEventListener('click', () => {
   location.reload();
 })
-
-//[Math.floor(Math.random() * array.length)]  
