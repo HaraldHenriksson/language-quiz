@@ -104,7 +104,3 @@ let array = [
 		image: "assets/images/r.jpg",
 	},
 ];
-
-const missing_students = [
-	
-];
