@@ -14,6 +14,7 @@ const sloganEl = document.querySelector('#slogan');
 const counterEl = document.querySelector('#counter');
 const pointsEl = document.querySelector('#points');
 const nextEl = document.querySelector('#next');
+const progressEl = document.querySelector('#progress-bar');
 
 restartEl.style.display ="none";
 
@@ -54,11 +55,20 @@ function points() {
   pointsEl.innerHTML = `${corrNrOfGuesses}⭐️`
 }
 
+let progress = 0;
+const progressBar = document.querySelector("#progress");
+
+function updateProgress() {
+  progress++;
+  progressBar.style.width = `${progress}0%`;
+}
+
 
 tenEl.addEventListener("click", () => {
   shortMode = true
   sloganEl.style.display = "none"
   nextEl.style.display = "block"
+  progressEl.style.display = "block"
   counterEl.innerHTML = `${counter} /10`
 });
 
@@ -66,6 +76,7 @@ twentyEl.addEventListener("click", () => {
   defaultMode = true
   sloganEl.style.display = "none"
   nextEl.style.display = "block"
+  progressEl.style.display = "block"
   counterEl.innerHTML = counter + "/20"
 });
 
@@ -73,6 +84,7 @@ allEl.addEventListener("click", () => {
   longMode = true
   sloganEl.style.display = "none"
   nextEl.style.display = "block"
+  progressEl.style.display = "block"
   counterEl.innerHTML = counter + "/" + array.length
 });
 
@@ -153,6 +165,7 @@ namesEl.addEventListener("click", (e) => {
       allWrong.push({image: corrClassmate.image});
       startDelay();
     }
+    updateProgress()
   }
 
   // if (shortMode === true && guesses === 10) {

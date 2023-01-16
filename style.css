@@ -12,7 +12,7 @@ body {
 	display: flex;
 	justify-content: center;
 	font-family: 'Fredoka One';
-	color: blueviolet;
+	color: rgba(158, 93, 219, 0.502);
 	text-shadow: 0 0 5px;
 	font-size: 80px;
 } 
@@ -81,6 +81,20 @@ img {
 	
 }
 
+#progress-bar {
+	width: 100%; 
+	height: 20px; 
+	background-color: #ddd; 
+	border-radius: 5px; 
+	display: none;
+  }
+  #progress {
+	width: 0%; 
+	height: 100%;
+	background-color: rgba(137, 43, 226, 0.538); 
+	border-radius: 5px; 
+  }
+
 @media (max-width: 400px) {
 	img {
 		width: 300px;
@@ -96,8 +110,8 @@ img {
 
 	@media (min-width: 800px) {
 		img {
-			width: 350px;
-			height: 350px;
+			width: 300px;
+			height: 300px;
 		}
 		button {
 			margin: 5%;
@@ -105,8 +119,8 @@ img {
 	}
 	@media (min-width: 1000px) {
 		img {
-			width: 350px;
-			height: 350px;
+			width: 300px;
+			height: 300px;
 		}
 		button {
 			margin: 6%;
@@ -119,8 +133,8 @@ img {
 
 	@media (min-width: 1500px) {
 		img {
-			width: 450px;
-			height: 450px;
+			width: 350px;
+			height: 350px;
 		}
 		button {
 			margin: 4%;
