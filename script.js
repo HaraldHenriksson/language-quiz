@@ -69,7 +69,7 @@ const start = () => {
     array = array.filter(image => !namesNotToShow.includes(image))
     
     corrClassmate = array[0]
-    picEl.src = "students/" + corrClassmate.image
+    picEl.src = corrClassmate.image
     corrName = corrClassmate.name
     namesNotToShow.push(corrClassmate)
     console.log(namesNotToShow)

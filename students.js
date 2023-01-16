@@ -1,107 +1,107 @@
 let array = [
 	{
 		name: "C",
-		image: "assets/images/students/c.jpg",
+		image: "assets/images/c-sharp.jpg",
 	},
 	{
 		name: "C#",
-		image: "assets/images/students/c-sharp.jpg",
+		image: "assets/images/c-sharp.jpg",
 	},
 	{
 		name: "C++",
-		image: "assets/images/students/c++.jpg",
+		image: "assets/images/c++.jpg",
 	},
 	{
 		name: "Java",
-		image: "assets/images/students/java.jpg",
+		image: "assets/images/java.jpg",
 	},
 	{
 		name: "JavaScript",
-		image: "assets/images/students/javascript.jpg",
+		image: "assets/images/javascript.jpg",
 	},
 	{
 		name: "PHP",
-		image: "assets/images/students/php.jpg",
+		image: "assets/images/php.jpg",
 	},
 	{
 		name: "Python",
-		image: "assets/images/students/python.jpg",
+		image: "assets/images/python.jpg",
 	},
 	{
 		name: "Go",
-		image: "assets/images/students/go.jpg",
+		image: "assets/images/go.jpg",
 	},
 	{
 		name: "Kotlin",
-		image: "assets/images/students/kotlin.jpg",
+		image: "assets/images/kotlin.jpg",
 	},
 	{
 		name: "Objective-C",
-		image: "assets/images/students/objective-c.jpg",
+		image: "assets/images/objective-c.jpg",
 	},
 	{
 		name: "Rust",
-		image: "assets/images/students/rust.jpg",
+		image: "assets/images/rust.jpg",
 	},
 	{
 		name: "Scala",
-		image: "assets/images/students/scala.jpg",
+		image: "assets/images/scala.jpg",
 	},
 	{
 		name: "Shell",
-		image: "assets/images/students/shell.jpg",
+		image: "assets/images/shell.jpg",
 	},
 	{
 		name: "SQL",
-		image: "assets/images/students/sql.jpg",
+		image: "assets/images/sql.jpg",
 	},
 	{
 		name: "TypeScript",
-		image: "assets/images/students/typescript.jpg",
+		image: "assets/images/typescript.jpg",
 	},
 	{
 		name: "Dart",
-		image: "assets/images/students/dart.jpg",
+		image: "assets/images/dart.jpg",
 	},
 	{
 		name: "Elixir",
-		image: "assets/images/students/elixir.jpg",
+		image: "assets/images/elixir.jpg",
 	},
 	{
 		name: "Erlang",
-		image: "assets/images/students/erlang.jpg",
+		image: "assets/images/erlang.jpg",
 	},
 	{
 		name: "F#",
-		image: "assets/images/students/f#.jpg",
+		image: "assets/images/f-sharp.jpg",
 	},
 	{
 		name: "Groovy",
-		image: "assets/images/students/groovy.jpg",
+		image: "assets/images/groovy.jpg",
 	},
 	{
 		name: "Haskell",
-		image: "assets/images/students/haskell.jpg",
+		image: "assets/images/haskell.jpg",
 	},
 	{
 		name: "Julia",
-		image: "assets/images/students/julia.jpg",
+		image: "assets/images/julia.jpg",
 	},
 	{
 		name: "lua",
-		image: "assets/images/students/lua.jpg",
+		image: "assets/images/lua.jpg",
 	},
 	{
 		name: "Perl",
-		image: "assets/images/students/perl.jpg",
+		image: "assets/images/perl.jpg",
 	},
 	{
 		name: "PowerShell",
-		image: "assets/images/students/powershell.jpg",
+		image: "assets/images/powershell.jpg",
 	},
 	{
 		name: "R",
-		image: "assets/images/students/j.jpg",
+		image: "assets/images/r.jpg",
 	},
 ];
 
