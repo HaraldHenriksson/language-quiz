@@ -5,7 +5,7 @@ const array = [
 	},
 	{
 		name: "C#",
-		image: "assets/images/students/c#.jpg",
+		image: "assets/images/students/c-sharp.jpg",
 	},
 	{
 		name: "C++",

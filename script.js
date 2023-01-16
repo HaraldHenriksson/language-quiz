@@ -60,18 +60,17 @@ let allCorrect = [];
 let allWrong = [];
 let namesNotToShow = [];
 
-// const newClassmate = () => {
-//   arrayCopy = array.filter(array => array.name !== namesNotToShow[guesses].name[2]);
-//   return arrayCopy
-// }
-
 // START function
 const start = () => {
   if (guesses !== array.length) {
-    // array = array.filter(array => array.name !== namesNotToShow);
+
+    shuffleArr(array)
+    
     corrClassmate = array[guesses]
     picEl.src = "students/" + corrClassmate.image
     corrName = corrClassmate.name
+    namesNotToShow.push(corrClassmate)
+    let array = array.filter(image => !namesNotToShow.includes(image));
     arrayCopy = array.filter(array => array.name !== corrName);
     
 
@@ -80,7 +79,6 @@ const start = () => {
     //GENERATE NEW ARRAY
     newRandomArr = arrayCopy.slice(0, 3);
     newRandomArr.push({name: corrName});
-    namesNotToShow.push({name: newRandomArr});
     console.log(namesNotToShow)
     //SHUFFFLE NEW ARRAY AGAIN SO RIGHT BUTTON ISN'T AT THE SAME SPOT EVERY TIME 
     shuffleArr(newRandomArr);
@@ -89,7 +87,6 @@ const start = () => {
 
     // DISPLAYING NAMES FROM NEW ARRAY
     newRandomArr.forEach((names) => {
-      //console.log(names.name)
       if (names.name === corrName) {
         namesEl.innerHTML += `<button id="corrGuess" class="btn btn-light">${names.name}</button>`;
       } else
@@ -119,7 +116,6 @@ let complete = false
 namesEl.addEventListener("click", (e) => {
   if (e.target.tagName === "BUTTON") {
     guesses++;
-    console.log(guesses);
     if (e.target.id === `corrGuess`) {
       corrNrOfGuesses++;
       e.target.classList.replace("btn-light", "btn-success");
@@ -130,7 +126,6 @@ namesEl.addEventListener("click", (e) => {
       allWrong.push({image: corrClassmate.image});
       startDelay();
     }
-    console.log(guesses, corrNrOfGuesses);
   }
   if (shortMode === true && guesses === 10) {
     display();
