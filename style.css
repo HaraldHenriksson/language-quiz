@@ -11,6 +11,7 @@ body {
  h1 {
 	display: flex;
 	justify-content: center;
+	font-family: 'Fredoka One';
 } 
 
 #question {
@@ -115,37 +116,3 @@ img {
 			margin-top: 0vh;
 		}
 	}
-
-/* button {
-	display: flex;
-	flex-direction: column;
-	justify-content: center; 
-	margin: 2%;
-}
-
-.startGame {
-	display: flex;
-	flex-direction: column;
-	justify-content: center; 
-}
-
-.resultContainer {
-	display: flex;
-	flex-direction: column;
-	justify-content: center; 
-}
-.container {
-	text-align: center;
-}  */
-
-/* @media (min-width: 603px) {
-	.container {
-		max-width: 80%;
-	}
-}
-
-@media (min-width: 800px) {
-	.container {
-		max-width: 80%;
-	}
-} */
