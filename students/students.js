@@ -27,6 +27,38 @@ const array = [
 		name: "Python",
 		image: "assets/images/students/python.jpg",
 	},
+	{
+		name: "Go",
+		image: "assets/images/students/go.jpg",
+	},
+	{
+		name: "Kotlin",
+		image: "assets/images/students/kotlin.jpg",
+	},
+	{
+		name: "Objective-C",
+		image: "assets/images/students/objective-c.jpg",
+	},
+	{
+		name: "Rust",
+		image: "assets/images/students/rust.jpg",
+	},
+	{
+		name: "Scala",
+		image: "assets/images/students/scala.jpg",
+	},
+	{
+		name: "Shell",
+		image: "assets/images/students/shell.jpg",
+	},
+	{
+		name: "sql",
+		image: "assets/images/students/sql.jpg",
+	},
+	{
+		name: "TypeScript",
+		image: "assets/images/students/typescript.jpg",
+	},
 ];
 
 const missing_students = [
