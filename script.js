@@ -172,11 +172,15 @@ namesEl.addEventListener("click", (e) => {
 });
 
 const startDelay = () => {
-  setTimeout( () => {
+  
       if (!complete) {
-        start();
+        nextEl.addEventListener('click', (e) => {
+          if (e.target.tagName === "BUTTON") {
+            start()
+          }
+        })
       }
-  }, 400);
+  
 };
 
 restartEl.addEventListener('click', () => {
