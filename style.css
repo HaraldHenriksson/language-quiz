@@ -12,10 +12,13 @@ body {
 	display: flex;
 	justify-content: center;
 	font-family: 'Fredoka One';
+	color: blueviolet;
+	text-shadow: 0 0 5px;
+	font-size: 80px;
 } 
 
-#question {
-	font-size: 100px;
+h3 {
+	font-size: small;
 }
 
 .image {

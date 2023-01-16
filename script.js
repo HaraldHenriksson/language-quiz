@@ -109,10 +109,10 @@ const display = () => {
 
 const displayResult = () => {
   allCorrect.forEach((img) => {
-    picResultEl.innerHTML += `<img id="correctPicResult" src="students/${img.image}" alt="Picture of correct guessed classmate">`
+    picResultEl.innerHTML += `<img id="correctPicResult" src="${img.image}" alt="Picture of correct guessed classmate">`
   })
   allWrong.forEach((img) => {
-    picResultEl.innerHTML += `<img id="wrongPicResult" src="students/${img.image}" alt="Picture of wrong guessed classmate">`
+    picResultEl.innerHTML += `<img id="wrongPicResult" src="${img.image}" alt="Picture of wrong guessed classmate">`
   })
 }
 
