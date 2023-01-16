@@ -50,11 +50,22 @@ img {
 	flex-direction: column;
 	justify-content: center; 
 	display: none;
-	margin: 2%;
 }
 
- button {
-	margin: 2%;
+.btn {
+	border-radius: 0;
+	color: white;
+	background-color: rgba(45, 45, 45, 0.518);
+}
+
+.btn:hover {
+	background-color: rgba(57, 57, 57, 0.487);
+	transition: background-color 0.3s ease;
+}
+
+#next {
+	display: none;
+	color: rgb(141, 193, 141);
 }
 
 #correctPicResult {

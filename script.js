@@ -12,6 +12,8 @@ const questionEl = document.querySelector('#question');
 const picResultEl = document.querySelector('#picResult');
 const sloganEl = document.querySelector('#slogan');
 const counterEl = document.querySelector('#counter');
+const pointsEl = document.querySelector('#points');
+const nextEl = document.querySelector('#next');
 
 restartEl.style.display ="none";
 
@@ -46,27 +48,35 @@ function count() {
   counterEl.innerHTML = `${counter} /10`
 }
 
+let corrNrOfGuesses = 0;
+function points() {
+  corrNrOfGuesses++
+  pointsEl.innerHTML = `${corrNrOfGuesses} Points⭐️`
+}
+
 
 tenEl.addEventListener("click", () => {
   shortMode = true
   sloganEl.style.display = "none"
+  nextEl.style.display = "block"
   counterEl.innerHTML = `${counter} /10`
 });
 
 twentyEl.addEventListener("click", () => {
   defaultMode = true
   sloganEl.style.display = "none"
+  nextEl.style.display = "block"
   counterEl.innerHTML = counter + "/20"
 });
 
 allEl.addEventListener("click", () => {
   longMode = true
   sloganEl.style.display = "none"
+  nextEl.style.display = "block"
   counterEl.innerHTML = counter + "/" + array.length
 });
 
 let guesses = 0;
-let corrNrOfGuesses = 0;
 let newRandomArr = [];
 let corrClassmate = "";
 let corrName = "";
@@ -103,9 +113,9 @@ const start = () => {
     // DISPLAYING NAMES FROM NEW ARRAY
     newRandomArr.forEach((names) => {
       if (names.name === corrName) {
-        namesEl.innerHTML += `<button id="corrGuess" class="btn btn-light">${names.name}</button>`;
+        namesEl.innerHTML += `<button id="corrGuess" class="btn">${names.name}</button>`;
       } else
-        namesEl.innerHTML += `<button id="btn" class="btn btn-light">${names.name}</button>`;
+        namesEl.innerHTML += `<button id="btn" class="btn">${names.name}</button>`;
     });
   }
 };
@@ -132,13 +142,13 @@ namesEl.addEventListener("click", (e) => {
   if (e.target.tagName === "BUTTON") {
     if (e.target.id === `corrGuess`) {
       count()
-      corrNrOfGuesses++;
-      e.target.classList.replace("btn-light", "btn-success");
+      points()
+      e.target.classList.add("btn-success");
       allCorrect.push({image: corrClassmate.image});
       startDelay();
     } else {
       count()
-      e.target.classList.replace("btn-light", "btn-danger");
+      e.target.classList.add( "btn-danger");
       allWrong.push({image: corrClassmate.image});
       startDelay();
     }
