@@ -10,6 +10,7 @@ const resultEl = document.querySelector('#result');
 const restartEl = document.querySelector('#restart');
 const questionEl = document.querySelector('#question');
 const picResultEl = document.querySelector('#picResult');
+const sloganEl = document.querySelector('#slogan');
 
 restartEl.style.display ="none";
 
@@ -41,14 +42,17 @@ let longMode = false;
 
 tenEl.addEventListener("click", () => {
   shortMode = true
+  sloganEl.style.display = "none"
 });
 
 twentyEl.addEventListener("click", () => {
   defaultMode = true
+  sloganEl.style.display = "none"
 });
 
 allEl.addEventListener("click", () => {
   longMode = true
+  sloganEl.style.display = "none"
 });
 
 let guesses = 0;
