@@ -52,38 +52,59 @@ const array = [
 		image: "assets/images/students/shell.jpg",
 	},
 	{
-		name: "sql",
+		name: "SQL",
 		image: "assets/images/students/sql.jpg",
 	},
 	{
 		name: "TypeScript",
 		image: "assets/images/students/typescript.jpg",
 	},
+	{
+		name: "Dart",
+		image: "assets/images/students/dart.jpg",
+	},
+	{
+		name: "Elixir",
+		image: "assets/images/students/elixir.jpg",
+	},
+	{
+		name: "Erlang",
+		image: "assets/images/students/erlang.jpg",
+	},
+	{
+		name: "F#",
+		image: "assets/images/students/f#.jpg",
+	},
+	{
+		name: "Groovy",
+		image: "assets/images/students/groovy.jpg",
+	},
+	{
+		name: "Haskell",
+		image: "assets/images/students/haskell.jpg",
+	},
+	{
+		name: "Julia",
+		image: "assets/images/students/julia.jpg",
+	},
+	{
+		name: "lua",
+		image: "assets/images/students/lua.jpg",
+	},
+	{
+		name: "Perl",
+		image: "assets/images/students/perl.jpg",
+	},
+	{
+		name: "PowerShell",
+		image: "assets/images/students/powershell.jpg",
+	},
+	{
+		name: "R",
+		image: "assets/images/students/j.jpg",
+	},
 ];
 
 const missing_students = [
-	{
-		name: "Amer El-Jechi",
-		image: null,
-	},
-	{
-		name: "Amin Hassani",
-		image: null,
-	},
-	{
-		name: "Asenakew Zegeye",
-		image: null,
-	},
-	{
-		name: "Gunnar Omander",
-		image: null,
-	},
-	{
-		name: "Louise Keinström",
-		image: null,
-	},
-	{
-		name: "Maryia Tamasheuskaya",
-		image: null,
-	},
+	
 ];
