@@ -105,11 +105,13 @@ const start = () => {
     array = array.filter(image => !namesNotToShow.includes(image))
     
     corrClassmate = array[0]
+    //console.log(array)
+    //console.log(corrClassmate)
     picEl.src = corrClassmate.image
     corrName = corrClassmate.name
-    console.log(corrClassmate)
+    //console.log(corrClassmate)
     namesNotToShow.push(corrClassmate)
-    console.log(namesNotToShow)
+    //console.log(namesNotToShow)
     arrayCopy = array.filter(array => array.name !== corrName);
     
 
@@ -158,73 +160,44 @@ namesEl.addEventListener("click", (e) => {
       points()
       e.target.classList.add("btn-success");
       allCorrect.push({image: corrClassmate.image});
-      startDelay();
     } else {
       count()
       e.target.classList.add( "btn-danger");
       allWrong.push({image: corrClassmate.image});
-      startDelay();
     }
     updateProgress()
   }
 
-  // if (shortMode === true && guesses === 10) {
-  //   display();
-  //   resultEl.innerHTML += `<button class="btn btn-light">You got ${corrNrOfGuesses} out of 10 correct</button>`;
-  //   complete = true
-  //   displayResult();
-  // } else if (defaultMode === true && guesses === 20) {
-  //   display();
-  //   resultEl.innerHTML += `<button class="btn btn-light">You got ${corrNrOfGuesses} out of 20 correct</button>`;
-  //   displayResult();
-  //   complete = true
-  // } else if (longMode === true && guesses === array.length) {
-  //   display();
-  //   resultEl.innerHTML += `<button class="btn btn-light">You got ${corrNrOfGuesses} out of 35 correct</button>`;
-  //   displayResult();
-  //   complete = true
-  // }
-
 });
 
-// const startDelay = () => {
-//   setTimeout( () => {
-//       if (!complete) {
-//         start();
-//       }
-//   }, 400);
-// };
-
- const startDelay = () => {
-  
-
-
-    if (shortMode === true && guesses === 10) {
-      display();
-      resultEl.innerHTML += `<button class="btn btn-light">You got ${corrNrOfGuesses} out of 10 correct</button>`;
-      complete = true
-      displayResult();
-    } else if (defaultMode === true && guesses === 20) {
-      display();
-      resultEl.innerHTML += `<button class="btn btn-light">You got ${corrNrOfGuesses} out of 20 correct</button>`;
-      displayResult();
-      complete = true
-    } else if (longMode === true && guesses === array.length) {
-      display();
-      resultEl.innerHTML += `<button class="btn btn-light">You got ${corrNrOfGuesses} out of 35 correct</button>`;
-      displayResult();
-      complete = true
-    }
 
     nextEl.addEventListener('click', (e) => {
+      
+      if (shortMode === true && guesses === 10) {
+        display();
+        resultEl.innerHTML += `<button class="btn btn-light">You got ${corrNrOfGuesses} out of 10 correct</button>`;
+        complete = true
+        displayResult();
+      } else if (defaultMode === true && guesses === 20) {
+        display();
+        resultEl.innerHTML += `<button class="btn btn-light">You got ${corrNrOfGuesses} out of 20 correct</button>`;
+        displayResult();
+        complete = true
+      } else if (longMode === true && guesses === array.length) {
+        display();
+        resultEl.innerHTML += `<button class="btn btn-light">You got ${corrNrOfGuesses} out of 35 correct</button>`;
+        displayResult();
+        complete = true
+      }
+
       if (e.target.tagName === "BUTTON" && !complete) {
         
                    start();
-                 
+                 console.log("start")
       }
    })
   
- };
+ 
 
 restartEl.addEventListener('click', () => {
   location.reload();
