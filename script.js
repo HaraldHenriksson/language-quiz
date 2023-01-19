@@ -46,7 +46,6 @@ let longMode = false;
 let counter = 0;
 function count() {
   counter++;
-  counterEl.innerHTML = `${counter} /10`
 }
 
 let corrNrOfGuesses = 0;
@@ -58,9 +57,22 @@ function points() {
 let progress = 0;
 const progressBar = document.querySelector("#progress");
 
-function updateProgress() {
+let d = 0;
+let l = 0;
+let long_mode_increment = 4.348;
+
+const updateProgress = () => {
   progress++;
-  progressBar.style.width = `${progress}0%`;
+  d = progress * 10 / 2;
+  l = progress * long_mode_increment;
+
+  if (shortMode === true) {
+    progressBar.style.width = `${progress}0%`;
+  } else if (defaultMode === true) {
+    progressBar.style.width = `${d}%`;
+  } else if (longMode === true) {
+    progressBar.style.width = `${l}%`;
+  }
 }
 
 
