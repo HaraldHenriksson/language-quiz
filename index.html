@@ -1,62 +1,69 @@
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta name="author" content="Harald">
-    <meta name="designer" content="Harald">
-    <meta name="city" content="Malmö">
-    <meta name="country" content="Sverige">
-    <meta name="robots" content="index, follow">
-    <meta name="og:type" content="website">
-    <meta name="og:title" content="Guess The Language Quiz">
-	<title>Guess The Language Quiz</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Harald" />
+    <meta name="designer" content="Harald" />
+    <meta name="city" content="Malmö" />
+    <meta name="country" content="Sverige" />
+    <meta name="robots" content="index, follow" />
+    <meta name="og:type" content="website" />
+    <meta name="og:title" content="Guess The Language Quiz" />
+    <title>Guess The Language Quiz</title>
 
-	<!-- Nice font -->
-	<link href="https://fonts.googleapis.com/css?family=Baskervville:400,400i&display=swap" rel="stylesheet">
+    <!-- Nice font -->
+    <link
+      href="https://fonts.googleapis.com/css?family=Baskervville:400,400i&display=swap"
+      rel="stylesheet"
+    />
 
-	<!-- Bootstrap 5.2 -->
-	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- Bootstrap 5.2 -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
 
-	<!-- Styles -->
-	<link rel="stylesheet" href="style.css">
-</head>
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body class="bg-dark text-white">
-	<div id="app" class="container">
-		<div id="top">
-			<h1>Quiz</h1>
-			<h2 id="slogan">Can you guess the language? Put your skills to the test!</h2>
-		</div>
-        <div class="image">
-                    <div id="question"><img src="assets/images/6tXM.gif" alt=""></div>
-					<img id="pic" src="" alt="Picture of classmate"> 
-					<div id="picResult"></div>
-			</div>
-			<div id="start" class="startGame">
-				<h2>Game mode</h2>
-				<h3>Pick what game mode you want to start the game</h3>
-				<button id="ten" class="btn">Short</button>
-				<button id="twenty" class="btn">Medium</button>
-				<button id="all" class="btn">Long</button>
-			</div>
-			<div>
-				<div id="progress-bar">
-					<div id="progress"></div>
-				  </div>
-			<div id="counter"></div>
-			<div id="points"></div>
-		</div>
-			<div id="names" class="namesContainer">
+  <body class="bg-dark text-white">
+    <div id="app" class="container">
+      <div id="top">
+        <h1>Quiz</h1>
+        <h2 id="slogan">
+          Can you guess the language? Put your skills to the test!
+        </h2>
+      </div>
+      <div class="image">
+        <div id="question"><img src="assets/images/6tXM.gif" alt="" /></div>
+        <img id="pic" src="" alt="Picture of classmate" />
+        <div id="picResult"></div>
+      </div>
+      <div id="start" class="startGame">
+        <h2>Game mode</h2>
+        <h3>Pick what game mode you want to start the game</h3>
+        <button id="ten" class="btn">Short</button>
+        <button id="twenty" class="btn">Medium</button>
+        <button id="all" class="btn">Long</button>
+      </div>
+      <div>
+        <div id="progress-bar">
+          <div id="progress"></div>
         </div>
-		<div id="result" class="resultContainer">
-		</div>
-		<button id="next" class="btn"> NEXT → </button>
-		<button id="restart" class="btn btn-danger">Quit ↺</button>
-	</div>
-	<script src="languages.js"></script>
-	<script src="script.js"></script>
-</body>
+        <div id="counter"></div>
+        <div id="points"></div>
+      </div>
+      <div id="names" class="namesContainer"></div>
+      <div id="result" class="resultContainer"></div>
+      <button id="next" class="btn">NEXT →</button>
+      <button id="restart" class="btn btn-danger">Quit ↺</button>
+    </div>
+    <script src="languages.js"></script>
+    <script src="script.js"></script>
+  </body>
 </html>

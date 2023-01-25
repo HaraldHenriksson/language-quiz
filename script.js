@@ -14,6 +14,7 @@ const counterEl = document.querySelector("#counter");
 const pointsEl = document.querySelector("#points");
 const nextEl = document.querySelector("#next");
 const progressEl = document.querySelector("#progress-bar");
+const corrGuessEl = document.querySelector("#corrGuess");
 
 restartEl.style.display = "none";
 
@@ -112,7 +113,7 @@ const start = () => {
 
     corrClassmate = array[0];
     //console.log(array)
-    //console.log(corrClassmate)
+    console.log(corrClassmate);
     picEl.src = corrClassmate.image;
     corrName = corrClassmate.name;
     //console.log(corrClassmate)
@@ -157,15 +158,22 @@ const displayResult = () => {
 
 let complete = false;
 
+let disableButtons = false;
+
 namesEl.addEventListener("click", (e) => {
-  if (e.target.tagName === "BUTTON") {
+  console.log(disableButtons);
+
+  if (e.target.tagName === "BUTTON" && disableButtons === false) {
     if (e.target.id === `corrGuess`) {
       points();
       e.target.classList.add("btn-success");
       allCorrect.push({ image: corrClassmate.image });
+      disableButtons = true;
     } else {
       e.target.classList.add("btn-danger");
+      //corrGuessEl.classList.add("btn-success");
       allWrong.push({ image: corrClassmate.image });
+      disableButtons = true;
     }
     counter++;
     console.log(counter);
@@ -193,6 +201,7 @@ nextEl.addEventListener("click", (e) => {
   }
 
   if (e.target.tagName === "BUTTON" && !complete) {
+    disableButtons = false;
     start();
   }
 });
