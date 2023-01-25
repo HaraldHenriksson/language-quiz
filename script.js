@@ -29,6 +29,8 @@ startEl.addEventListener("click", () => {
 // MAKING A COPY OF ARRAY
 arrayCopy = [...array];
 
+const fullArray = [...array];
+
 // ADDING FISHER YATES METHOD
 const shuffleArr = (array) => {
   for (let i = array.length - 1; i > 0; i--) {
@@ -54,9 +56,10 @@ function points() {
 let progress = 0;
 const progressBar = document.querySelector("#progress");
 
+let totalQuestions = fullArray.length;
 let d = 0;
 let l = 0;
-let long_mode_increment = 4.348;
+let long_mode_increment = 100 / totalQuestions;
 
 const updateProgress = () => {
   progress++;
@@ -71,7 +74,7 @@ const updateProgress = () => {
     counterEl.innerHTML = counter + "/20";
   } else if (longMode === true) {
     progressBar.style.width = `${l}%`;
-    counterEl.innerHTML = counter + "/" + array.length;
+    counterEl.innerHTML = counter + "/" + totalQuestions;
   }
 };
 
@@ -161,8 +164,6 @@ let complete = false;
 let disableButtons = false;
 
 namesEl.addEventListener("click", (e) => {
-  console.log(disableButtons);
-
   if (e.target.tagName === "BUTTON" && disableButtons === false) {
     if (e.target.id === `corrGuess`) {
       points();
@@ -176,7 +177,6 @@ namesEl.addEventListener("click", (e) => {
       disableButtons = true;
     }
     counter++;
-    console.log(counter);
     guesses++;
     updateProgress();
   }
@@ -193,7 +193,7 @@ nextEl.addEventListener("click", (e) => {
     resultEl.innerHTML += `<button class="btn btn-light">You got ${corrNrOfGuesses} out of 20 correct</button>`;
     displayResult();
     complete = true;
-  } else if (longMode === true && guesses === array.length) {
+  } else if (longMode === true && guesses === fullArray.length) {
     display();
     resultEl.innerHTML += `<button class="btn btn-light">You got ${corrNrOfGuesses} out of 35 correct</button>`;
     displayResult();
@@ -202,6 +202,7 @@ nextEl.addEventListener("click", (e) => {
 
   if (e.target.tagName === "BUTTON" && !complete) {
     disableButtons = false;
+    console.log(fullArray.length);
     start();
   }
 });
