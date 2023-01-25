@@ -78,28 +78,34 @@ const updateProgress = () => {
   }
 };
 
-tenEl.addEventListener("click", () => {
-  shortMode = true;
-  sloganEl.style.display = "none";
-  nextEl.style.display = "block";
-  progressEl.style.display = "block";
-  counterEl.innerHTML = counter + "/10";
+tenEl.addEventListener("click", (e) => {
+  if (e.target.tagName === "BUTTON") {
+    shortMode = true;
+    sloganEl.style.display = "none";
+    nextEl.style.display = "block";
+    progressEl.style.display = "block";
+    counterEl.innerHTML = counter + "/10";
+  }
 });
 
 twentyEl.addEventListener("click", () => {
-  defaultMode = true;
-  sloganEl.style.display = "none";
-  nextEl.style.display = "block";
-  progressEl.style.display = "block";
-  counterEl.innerHTML = counter + "/20";
+  if (e.target.tagName === "BUTTON") {
+    defaultMode = true;
+    sloganEl.style.display = "none";
+    nextEl.style.display = "block";
+    progressEl.style.display = "block";
+    counterEl.innerHTML = counter + "/20";
+  }
 });
 
 allEl.addEventListener("click", () => {
-  longMode = true;
-  sloganEl.style.display = "none";
-  nextEl.style.display = "block";
-  progressEl.style.display = "block";
-  counterEl.innerHTML = counter + "/" + totalQuestions;
+  if (e.target.tagName === "BUTTON") {
+    longMode = true;
+    sloganEl.style.display = "none";
+    nextEl.style.display = "block";
+    progressEl.style.display = "block";
+    counterEl.innerHTML = counter + "/" + totalQuestions;
+  }
 });
 
 let guesses = 0;
@@ -151,14 +157,18 @@ start();
 const display = () => {
   namesEl.style.display = "none";
   picEl.style.display = "none";
+  nextEl.style.display = "none";
+  progressEl.style.display = "none";
+  counterEl.style.display = "none";
+  pointsEl.style.display = "none";
 };
 
 const displayResult = () => {
   allCorrect.forEach((img) => {
-    picResultEl.innerHTML += `<div class="displayWrong"><img id="correctPicResult" src="${img.image}" alt="Picture of correct guessed classmate"><div class="names">${img.name}</div></div>`;
+    picResultEl.innerHTML += `<div class="displayCorr"><img id="correctPicResult" src="${img.image}" alt="Picture of correct guessed classmate"><div class="names">${img.name}</div></div>`;
   });
   allWrong.forEach((img) => {
-    picResultEl.innerHTML += `<div class="displayCorr"><img id="wrongPicResult" src="${img.image}" alt="Picture of wrong guessed classmate"> <div class="names">${img.name}</div></div>`;
+    picResultEl.innerHTML += `<div class="displayWrong"><img id="wrongPicResult" src="${img.image}" alt="Picture of wrong guessed classmate"> <div class="names">${img.name}</div></div>`;
   });
 };
 
@@ -171,12 +181,12 @@ namesEl.addEventListener("click", (e) => {
     if (e.target.id === `corrGuess`) {
       points();
       e.target.classList.add("btn-success");
-      allCorrect.push({ image: corrClassmate.image });
+      allCorrect.push({ image: corrClassmate.image, name: corrClassmate.name });
       disableButtons = true;
     } else {
       e.target.classList.add("btn-danger");
       //corrGuessEl.classList.add("btn-success");
-      allWrong.push({ image: corrClassmate.image });
+      allWrong.push({ image: corrClassmate.image, name: corrClassmate.name });
       disableButtons = true;
     }
     counter++;
@@ -188,17 +198,17 @@ namesEl.addEventListener("click", (e) => {
 nextEl.addEventListener("click", (e) => {
   if (shortMode === true && guesses === 10) {
     display();
-    resultEl.innerHTML += `<button class="btn btn-light">You got ${corrNrOfGuesses} out of 10 correct</button>`;
+    resultEl.innerHTML += `<div>Your score is ${corrNrOfGuesses} out of 10 correct!</divdiv>`;
     complete = true;
     displayResult();
   } else if (defaultMode === true && guesses === 20) {
     display();
-    resultEl.innerHTML += `<button class="btn btn-light">You got ${corrNrOfGuesses} out of 20 correct</button>`;
+    resultEl.innerHTML += `<div>Your score is ${corrNrOfGuesses} out of 20 correct!</div>`;
     displayResult();
     complete = true;
   } else if (longMode === true && guesses === fullArray.length) {
     display();
-    resultEl.innerHTML += `<button class="btn btn-light">You got ${corrNrOfGuesses} out of 35 correct</button>`;
+    resultEl.innerHTML += `<div>Your score is ${corrNrOfGuesses} out of 35 correct!</div>`;
     displayResult();
     complete = true;
   }
