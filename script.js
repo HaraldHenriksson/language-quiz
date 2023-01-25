@@ -83,6 +83,7 @@ tenEl.addEventListener("click", () => {
   sloganEl.style.display = "none";
   nextEl.style.display = "block";
   progressEl.style.display = "block";
+  counterEl.innerHTML = counter + "/10";
 });
 
 twentyEl.addEventListener("click", () => {
@@ -90,6 +91,7 @@ twentyEl.addEventListener("click", () => {
   sloganEl.style.display = "none";
   nextEl.style.display = "block";
   progressEl.style.display = "block";
+  counterEl.innerHTML = counter + "/20";
 });
 
 allEl.addEventListener("click", () => {
@@ -97,6 +99,7 @@ allEl.addEventListener("click", () => {
   sloganEl.style.display = "none";
   nextEl.style.display = "block";
   progressEl.style.display = "block";
+  counterEl.innerHTML = counter + "/" + totalQuestions;
 });
 
 let guesses = 0;
@@ -152,10 +155,10 @@ const display = () => {
 
 const displayResult = () => {
   allCorrect.forEach((img) => {
-    picResultEl.innerHTML += `<img id="correctPicResult" src="${img.image}" alt="Picture of correct guessed classmate">`;
+    picResultEl.innerHTML += `<div class="displayWrong"><img id="correctPicResult" src="${img.image}" alt="Picture of correct guessed classmate"><div class="names">${img.name}</div></div>`;
   });
   allWrong.forEach((img) => {
-    picResultEl.innerHTML += `<img id="wrongPicResult" src="${img.image}" alt="Picture of wrong guessed classmate">`;
+    picResultEl.innerHTML += `<div class="displayCorr"><img id="wrongPicResult" src="${img.image}" alt="Picture of wrong guessed classmate"> <div class="names">${img.name}</div></div>`;
   });
 };
 

@@ -69,17 +69,38 @@ img {
 	border-color: blueviolet;
 }
 
+.displayCorr {
+	display: flex;
+	align-items: center;
+	padding: 0.2em;
+	margin: 1em;
+	background-color: rgba(98, 220, 147, 0.518);
+}
+
+.displayWrong {
+	display: flex;
+	align-items: center;
+	padding: 0.2em;
+	margin: 1em;
+	background-color: rgba(222, 95, 95, 0.518);
+}
+
 #correctPicResult {
+	display: block;
 	width: 100px;
 	height: 100px;
+	padding: 0.7em;
 }
 
 #wrongPicResult {
+	display: block;
 	width: 100px;
 	height: 100px;
-	filter: blur(5px);
-	
-	
+	padding: 0.7em;
+}
+
+.names {
+	padding: 0.7em;
 }
 
 #progress-bar {
@@ -94,6 +115,10 @@ img {
 	height: 100%;
 	background-color: rgba(137, 43, 226, 0.538); 
 	border-radius: 5px; 
+  }
+
+  #restart {
+	color: rgb(245, 110, 110);
   }
 
 @media (max-width: 400px) {
