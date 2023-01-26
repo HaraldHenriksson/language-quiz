@@ -18,13 +18,13 @@ const corrGuessEl = document.querySelector("#corrGuess");
 
 restartEl.style.display = "none";
 
-startEl.addEventListener("click", () => {
+const begin = () => {
   startEl.style.display = "none";
   namesEl.style.display = "flex";
   picEl.style.display = "flex";
   questionEl.style.display = "none";
   restartEl.style.display = "flex";
-});
+};
 
 // MAKING A COPY OF ARRAY
 arrayCopy = [...array];
@@ -80,6 +80,7 @@ const updateProgress = () => {
 
 tenEl.addEventListener("click", (e) => {
   if (e.target.tagName === "BUTTON") {
+    begin();
     shortMode = true;
     sloganEl.style.display = "none";
     nextEl.style.display = "block";
@@ -90,6 +91,7 @@ tenEl.addEventListener("click", (e) => {
 
 twentyEl.addEventListener("click", () => {
   if (e.target.tagName === "BUTTON") {
+    begin();
     defaultMode = true;
     sloganEl.style.display = "none";
     nextEl.style.display = "block";
@@ -100,6 +102,7 @@ twentyEl.addEventListener("click", () => {
 
 allEl.addEventListener("click", () => {
   if (e.target.tagName === "BUTTON") {
+    begin();
     longMode = true;
     sloganEl.style.display = "none";
     nextEl.style.display = "block";
