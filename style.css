@@ -3,7 +3,7 @@ html {
 }
 
 body {
-	color: #333;
+	background-color: rgb(28, 17, 48);
 	font-weight: 400;
 }
 
@@ -17,11 +17,11 @@ body {
 } 
 
 h2 {
-	color: rgba(158, 93, 219, 0.502);
+	color: rgba(178, 140, 215, 0.502);
 }
 
 #slogan {
-	color: beige;
+	color: white;
 }
 
 h3 {
