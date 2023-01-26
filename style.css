@@ -114,11 +114,12 @@ img {
 	width: 0%; 
 	height: 100%;
 	background-color: rgba(137, 43, 226, 0.538); 
-	border-radius: 5px; 
+	border-radius: 2px; 
   }
 
   #restart {
 	color: rgb(245, 110, 110);
+	margin-bottom: 8%;
   }
 
 @media (min-width: 400px) {
@@ -127,10 +128,10 @@ img {
 		height: 300px;
 	}
 	button {
-		margin: 2%;
+		margin: 1%;
 	}
 	#picResult {
-		width: 300px
+		width: 300px;
 	}
 }
 
@@ -140,10 +141,10 @@ img {
 			height: 300px;
 		}
 		button {
-			margin: 5%;
+			margin: 1%;
 		}
 		#picResult {
-			width: 600px
+			width: 500px
 		}
 	}
 	@media (min-width: 1000px) {
@@ -152,8 +153,7 @@ img {
 			height: 300px;
 		}
 		button {
-			margin: 6%;
-			font-size: large;
+			margin: 1%;
 		}
 	}
 
@@ -163,7 +163,7 @@ img {
 			height: 350px;
 		}
 		button {
-			margin: 4%;
+			margin: 1%;
 			font-size: large;
 		}
 	}
