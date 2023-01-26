@@ -15,6 +15,7 @@ const pointsEl = document.querySelector("#points");
 const nextEl = document.querySelector("#next");
 const progressEl = document.querySelector("#progress-bar");
 const corrGuessEl = document.querySelector("#corrGuess");
+const scoreEl = document.querySelector("#score");
 
 restartEl.style.display = "none";
 
@@ -89,7 +90,7 @@ tenEl.addEventListener("click", (e) => {
   }
 });
 
-twentyEl.addEventListener("click", () => {
+twentyEl.addEventListener("click", (e) => {
   if (e.target.tagName === "BUTTON") {
     begin();
     defaultMode = true;
@@ -100,7 +101,7 @@ twentyEl.addEventListener("click", () => {
   }
 });
 
-allEl.addEventListener("click", () => {
+allEl.addEventListener("click", (e) => {
   if (e.target.tagName === "BUTTON") {
     begin();
     longMode = true;
@@ -198,22 +199,40 @@ namesEl.addEventListener("click", (e) => {
   }
 });
 
+const setStorage = () => {
+  let userScore = corrNrOfGuesses;
+  let percentageScore = Math.round((userScore / totalQuestions) * 100);
+
+  localStorage.setItem("persentageScore", percentageScore);
+
+  let storedScore = localStorage.getItem("persentageScore");
+
+  scoreEl.innerHTML = `You're last score was ${storedScore}% correct`;
+};
+
+scoreEl.addEventListener("click", () => {
+  localStorage.removeItem("percentageScore");
+});
+
 nextEl.addEventListener("click", (e) => {
   if (shortMode === true && guesses === 10) {
     display();
     resultEl.innerHTML += `<div>Your score is ${corrNrOfGuesses} out of 10 correct!</divdiv>`;
     complete = true;
     displayResult();
+    setStorage();
   } else if (defaultMode === true && guesses === 20) {
     display();
     resultEl.innerHTML += `<div>Your score is ${corrNrOfGuesses} out of 20 correct!</div>`;
     displayResult();
     complete = true;
+    setStorage();
   } else if (longMode === true && guesses === fullArray.length) {
     display();
-    resultEl.innerHTML += `<div>Your score is ${corrNrOfGuesses} out of 35 correct!</div>`;
+    resultEl.innerHTML += `<div>Your score is ${corrNrOfGuesses} out of ${fullArray} correct!</div>`;
     displayResult();
     complete = true;
+    setStorage();
   }
 
   if (e.target.tagName === "BUTTON" && !complete) {

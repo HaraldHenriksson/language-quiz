@@ -38,7 +38,7 @@ img {
 }
 
 .container {
-	margin-top: 15vh;
+	margin-top: 1vh;
 	display: flex;
 	flex-direction: column;
 	text-align: center;
@@ -121,7 +121,7 @@ img {
 	color: rgb(245, 110, 110);
   }
 
-@media (max-width: 400px) {
+@media (min-width: 400px) {
 	img {
 		width: 300px;
 		height: 300px;
@@ -129,8 +129,8 @@ img {
 	button {
 		margin: 2%;
 	}
-	.container {
-		margin-top: 10vh;
+	#picResult {
+		width: 300px
 	}
 }
 
@@ -142,6 +142,9 @@ img {
 		button {
 			margin: 5%;
 		}
+		#picResult {
+			width: 600px
+		}
 	}
 	@media (min-width: 1000px) {
 		img {
@@ -151,9 +154,6 @@ img {
 		button {
 			margin: 6%;
 			font-size: large;
-		}
-		.container {
-			margin-top: 10vh;
 		}
 	}
 
@@ -165,8 +165,5 @@ img {
 		button {
 			margin: 4%;
 			font-size: large;
-		}
-		.container {
-			margin-top: 0vh;
 		}
 	}
