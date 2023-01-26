@@ -4,21 +4,29 @@ html {
 
 body {
 	color: #333;
-	font-family: 'Baskervville', monospace;
 	font-weight: 400;
 }
 
  h1 {
 	display: flex;
 	justify-content: center;
-	font-family: 'Fredoka One';
+	font-family: 'Barlow Condensed', sans-serif;
 	color: rgba(158, 93, 219, 0.502);
 	text-shadow: 0 0 5px;
 	font-size: 80px;
 } 
 
+h2 {
+	color: rgba(158, 93, 219, 0.502);
+}
+
+#slogan {
+	color: beige;
+}
+
 h3 {
 	font-size: small;
+	font-family: 'Barlow Condensed', sans-serif;
 }
 
 .image {
@@ -56,6 +64,10 @@ img {
 	border-radius: 0;
 	color: white;
 	background-color: rgba(45, 45, 45, 0.518);
+}
+
+button {
+	margin: 1%;
 }
 
 .btn:hover {
@@ -122,38 +134,23 @@ img {
 	margin-bottom: 8%;
   }
 
-@media (min-width: 400px) {
-	img {
-		width: 300px;
-		height: 300px;
-	}
-	button {
-		margin: 1%;
-	}
+  @media (min-width: 600px) {
 	#picResult {
-		width: 300px;
+		width: 400px;
 	}
 }
 
-	@media (min-width: 800px) {
+
+	@media (max-width: 300px) {
 		img {
 			width: 300px;
 			height: 300px;
-		}
-		button {
-			margin: 1%;
-		}
-		#picResult {
-			width: 500px
 		}
 	}
 	@media (min-width: 1000px) {
 		img {
 			width: 300px;
 			height: 300px;
-		}
-		button {
-			margin: 1%;
 		}
 	}
 
