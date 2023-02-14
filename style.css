@@ -140,13 +140,6 @@ button {
 	}
 }
 
-
-	@media (max-width: 300px) {
-		img {
-			width: 300px;
-			height: 300px;
-		}
-	}
 	@media (min-width: 1000px) {
 		img {
 			width: 300px;
