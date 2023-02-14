@@ -169,10 +169,10 @@ const display = () => {
 
 const displayResult = () => {
   allCorrect.forEach((img) => {
-    picResultEl.innerHTML += `<div class="displayCorr"><img id="correctPicResult" src="${img.image}" alt="Picture of correct guessed classmate"><div class="names">${img.name}</div></div>`;
+    picResultEl.innerHTML += `<div class="displayCorr"><img src="${img.image}" alt="Picture of correct guessed classmate"><div class="names">${img.name}</div></div>`;
   });
   allWrong.forEach((img) => {
-    picResultEl.innerHTML += `<div class="displayWrong"><img id="wrongPicResult" src="${img.image}" alt="Picture of wrong guessed classmate"> <div class="names">${img.name}</div></div>`;
+    picResultEl.innerHTML += `<div class="displayWrong"><img src="${img.image}" alt="Picture of wrong guessed classmate"> <div class="names">${img.name}</div></div>`;
   });
 };
 

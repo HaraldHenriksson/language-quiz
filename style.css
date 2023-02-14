@@ -97,7 +97,7 @@ button {
 	background-color: rgba(222, 95, 95, 0.518);
 }
 
-#correctPicResult {
+/* #correctPicResult {
 	display: block;
 	width: 100px;
 	height: 100px;
@@ -109,7 +109,7 @@ button {
 	width: 100px;
 	height: 100px;
 	padding: 0.7em;
-}
+} */
 
 .names {
 	padding: 0.7em;
