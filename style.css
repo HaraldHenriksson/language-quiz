@@ -136,13 +136,13 @@ button {
 
 	@media (min-width: 600px) {
 		img {
-			width: 400px;
+			width: 500px;
 		}
 	}
 
 	@media (min-width: 1500px) {
 		img {
-			width: 500px;
+			width: 600px;
 		}
 		button {
 			margin: 1%;
