@@ -34,11 +34,13 @@ h3 {
 	justify-content: center; 
 	margin-top: 2%;
 	margin-bottom: 2%;
+	object-fit: cover;
 }
 
 img {
-    width: 300px;
-    height: 300px;
+    max-width: 100%;
+	height: auto;
+    object-fit: cover;
 }
 
 #pic {
@@ -134,23 +136,28 @@ button {
 	margin-bottom: 8%;
   }
 
+  .bottomSection {
+	position: fixed;
+	bottom: 10%;
+  }
+
   @media (min-width: 600px) {
 	#picResult {
 		width: 400px;
 	}
 }
 
-	@media (min-width: 1000px) {
+	@media (min-width: 600px) {
 		img {
-			width: 300px;
-			height: 300px;
+			width: 400px;
+			/* height: 400px; */
 		}
 	}
 
 	@media (min-width: 1500px) {
 		img {
-			width: 350px;
-			height: 350px;
+			width: 500px;
+			/* height: 600px; */
 		}
 		button {
 			margin: 1%;
