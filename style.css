@@ -34,7 +34,6 @@ h3 {
 	justify-content: center; 
 	margin-top: 2%;
 	margin-bottom: 2%;
-	object-fit: cover;
 }
 
 img {
@@ -87,6 +86,7 @@ button {
 	display: flex;
 	align-items: center;
 	padding: 0.2em;
+	padding-right: 6em;
 	margin: 1em;
 	background-color: rgba(98, 220, 147, 0.518);
 }
@@ -95,23 +95,10 @@ button {
 	display: flex;
 	align-items: center;
 	padding: 0.2em;
+	padding-right: 6em;
 	margin: 1em;
 	background-color: rgba(222, 95, 95, 0.518);
 }
-
-/* #correctPicResult {
-	display: block;
-	width: 100px;
-	height: 100px;
-	padding: 0.7em;
-}
-
-#wrongPicResult {
-	display: block;
-	width: 100px;
-	height: 100px;
-	padding: 0.7em;
-} */
 
 .names {
 	padding: 0.7em;
@@ -150,14 +137,12 @@ button {
 	@media (min-width: 600px) {
 		img {
 			width: 400px;
-			/* height: 400px; */
 		}
 	}
 
 	@media (min-width: 1500px) {
 		img {
 			width: 500px;
-			/* height: 600px; */
 		}
 		button {
 			margin: 1%;
